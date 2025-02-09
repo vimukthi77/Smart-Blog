@@ -3,15 +3,12 @@ import { PrismaClient } from '@prisma/client'
 
 const prisma = new PrismaClient()
 
-interface RouteParams {
-  params: {
-    id: string
-  }
-}
-
-export async function PUT(request: Request, { params }: RouteParams) {
+export async function PUT(
+  request: Request,
+  context: { params: { id: string } }
+) {
   const { role } = await request.json()
-  const id = params.id
+  const id = context.params.id
     
   const user = await prisma.user.update({
     where: { id },
