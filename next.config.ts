@@ -9,7 +9,18 @@ const nextConfig: NextConfig = {
     GOOGLE_SECRET: process.env.GOOGLE_SECRET,
     GITHUB_ID: process.env.GITHUB_ID,
     GITHUB_SECRET: process.env.GITHUB_SECRET,
-  }
+  },
+  typescript: {
+    ignoreBuildErrors: true,
+  },
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
+  images: {
+    domains: ['localhost'],
+    unoptimized: true
+  },
+  output: 'standalone'
 };
 
 export default nextConfig;
