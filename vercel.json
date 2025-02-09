@@ -1,6 +1,6 @@
 {
   "buildCommand": "next build",
-  "ignoreCommand": true,
+  "ignoreCommand": "true",
   "installCommand": "npm install",
   "framework": "nextjs"
 }
