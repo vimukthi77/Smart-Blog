@@ -35,7 +35,7 @@ export default function Home() {
         <div className="container mx-auto px-6">
           <h2 className="text-3xl font-bold text-center mb-12">Featured Posts</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {[1, 2, 3].map((post) => (
+            {[1,2,3].map((post) => (
               <motion.div
                 key={post}
                 initial={{ opacity: 0 }}
@@ -45,7 +45,7 @@ export default function Home() {
               >
                 <div className="relative h-48">
                   <Image
-                    src={`/blog-${post}.jpg`}
+                    src={`/3.jpg`}
                     alt={`Blog post ${post}`}
                     fill
                     className="object-cover"
@@ -65,6 +65,7 @@ export default function Home() {
           </div>
         </div>
       </section>
+      
 
       {/* Categories Section */}
       <section className="py-20 bg-background">
@@ -122,7 +123,7 @@ export default function Home() {
               >
                 <div className="relative h-48">
                   <Image
-                    src={`/post-${post}.jpg`}
+                    src={`/2.jpg`}
                     alt={`Post ${post}`}
                     fill
                     className="object-cover"
